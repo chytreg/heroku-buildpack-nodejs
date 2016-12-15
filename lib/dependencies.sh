@@ -31,7 +31,7 @@ yarn_node_modules() {
   echo "Installing node modules (yarn)"
   rm -rf "$build_dir/node_modules"  # with a deterministic package manager, there's no longer any reason to check in node_modules
   cd "$build_dir"
-  yarn install --no-lockfile 2>&1
+  yarn install --pure-lockfile  2>&1
 }
 
 npm_node_modules() {
